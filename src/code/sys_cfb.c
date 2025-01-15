@@ -27,7 +27,7 @@ void SysCfb_Init(s32 n64dd) {
 #if DEBUG_FEATURES
             sSysCfbEnd = tmpFbEnd;
 #else
-            sSysCfbEnd = 0x80400000;
+            sSysCfbEnd = 0x80400000; // 0x80800000
 #endif
         }
     } else if (osMemSize >= 0x400000) {

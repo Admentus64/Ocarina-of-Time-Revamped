@@ -2733,13 +2733,10 @@ void Player_UpdateItems(Player* this, PlayState* play) {
 }
 
 s32 func_80834380(PlayState* play, Player* this, s32* itemPtr, s32* typePtr) {
-    if (LINK_IS_ADULT) {
+    if (this->heldItemAction != PLAYER_IA_SLINGSHOT) {
         *itemPtr = ITEM_BOW;
-        if (this->stateFlags1 & PLAYER_STATE1_23) {
-            *typePtr = ARROW_NORMAL_HORSE;
-        } else {
+        if (!(this->stateFlags1 & PLAYER_STATE1_23) && !(this->stateFlags1 & PLAYER_STATE1_USING_BOOMERANG))
             *typePtr = ARROW_NORMAL + (this->heldItemAction - PLAYER_IA_BOW);
-        }
     } else {
         *itemPtr = ITEM_SLINGSHOT;
         *typePtr = ARROW_SEED;
@@ -5866,19 +5863,13 @@ void func_8083AA10(Player* this, PlayState* play) {
 s32 func_8083AD4C(PlayState* play, Player* this) {
     s32 camMode;
 
-    if (this->unk_6AD == 2) {
-        if (func_8002DD6C(this)) {
-            if (LINK_IS_ADULT) {
-                camMode = CAM_MODE_AIM_ADULT;
-            } else {
-                camMode = CAM_MODE_AIM_CHILD;
-            }
-        } else {
-            camMode = CAM_MODE_AIM_BOOMERANG;
-        }
-    } else {
+    camMode = CAM_MODE_AIM_BOOMERANG;
+    if (this->unk_6AD != 2)
         camMode = CAM_MODE_FIRST_PERSON;
-    }
+    else if (this->stateFlags1 & PLAYER_STATE1_3 && this->heldItemAction == PLAYER_IA_SLINGSHOT)
+        camMode = CAM_MODE_AIM_CHILD;
+    else if (this->stateFlags1 & PLAYER_STATE1_3)
+        camMode = CAM_MODE_AIM_ADULT;
 
     return Camera_RequestMode(Play_GetCamera(play, CAM_ID_MAIN), camMode);
 }
@@ -12233,7 +12224,7 @@ void Player_Draw(Actor* thisx, PlayState* play2) {
         s32 pad;
 
         if ((this->csAction != PLAYER_CSACTION_NONE) || (Player_CheckHostileLockOn(this) && 0) ||
-            (this->actor.projectedPos.z < 160.0f)) {
+            (this->actor.projectedPos.z < 2000.0f)) {
             lod = 0;
         } else {
             lod = 1;
@@ -15519,7 +15510,7 @@ void func_80851A50(PlayState* play, Player* this, CsCmdActorCue* cue) {
         this->interactRangeActor->parent = &this->actor;
 
         if (!LINK_IS_ADULT) {
-            dLists = gPlayerLeftHandBgsDLs;
+            dLists = gPlayerLeftHandBgsDLs + 6;
         } else {
             dLists = gPlayerLeftHandClosedDLs;
         }

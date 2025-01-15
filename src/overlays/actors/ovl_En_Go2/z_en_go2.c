@@ -1064,6 +1064,10 @@ void EnGo2_BiggoronSetTextId(EnGo2* this, PlayState* play, Player* player) {
             }
             player->actor.textId = this->actor.textId;
 
+       /*} else {
+            player->actor.textId = this->actor.textId = (INV_CONTENT(ITEM_TRADE_ADULT) <= ITEM_BROKEN_GORONS_SWORD && func_8002F368(play) == EXCH_ITEM_BROKEN_GORONS_SWORD && CHECK_OWNED_EQUIP_ALT(EQUIP_TYPE_SWORD, EQUIP_INV_SWORD_BIGGORON)) ? (GET_INFTABLE(INFTABLE_B4) ?
+            0x3055 : 0x3054) : 0x3053;
+        }*/
         } else if (INV_CONTENT(ITEM_TRADE_ADULT) <= ITEM_BROKEN_GORONS_SWORD) {
             if (Actor_GetPlayerExchangeItemId(play) == EXCH_ITEM_BROKEN_GORONS_SWORD) {
                 if (GET_INFTABLE(INFTABLE_B4)) {

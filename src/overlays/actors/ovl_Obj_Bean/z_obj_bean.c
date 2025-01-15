@@ -468,8 +468,9 @@ void ObjBean_Init(Actor* thisx, PlayState* play) {
     ObjBean* this = (ObjBean*)thisx;
 
     Actor_ProcessInitChain(&this->dyna.actor, sInitChain);
+  //if (IS_DAY && GET_EVENTCHKINF(EVENTCHKINF_45) && Flags_GetSwitch(play, PARAMS_GET_U(this->dyna.actor.params, 0, 6)) && path != 0x20) {
     if (LINK_AGE_IN_YEARS == YEARS_ADULT) {
-        if (Flags_GetSwitch(play, PARAMS_GET_U(this->dyna.actor.params, 0, 6)) || (DEBUG_FEATURES && mREG(1) == 1)) {
+        if (Flags_GetSwitch(play, PARAMS_GET_U(this->dyna.actor.params, 0, 6)) || (DEBUG_FEATURES && mREG(1) == 1)) { //
             path = PARAMS_GET_U(this->dyna.actor.params, 8, 5);
             if (path == 0x1F) {
                 PRINTF_COLOR_ERROR();
@@ -500,10 +501,10 @@ void ObjBean_Init(Actor* thisx, PlayState* play) {
             ActorShape_Init(&this->dyna.actor.shape, 0.0f, ActorShadow_DrawCircle, 8.8f);
             ObjBean_FindFloor(this, play);
             this->unk_1F6 = this->dyna.actor.home.rot.z & 3;
-        } else {
-            Actor_Kill(&this->dyna.actor);
-            return;
-        }
+        } else { //
+            Actor_Kill(&this->dyna.actor); //
+            return; //
+        } //
     } else if ((Flags_GetSwitch(play, PARAMS_GET_U(this->dyna.actor.params, 0, 6)) != 0) ||
                (DEBUG_FEATURES && mREG(1) == 1)) {
         ObjBean_SetupWaitForWater(this);

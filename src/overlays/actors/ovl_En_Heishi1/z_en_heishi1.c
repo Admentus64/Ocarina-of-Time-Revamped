@@ -117,6 +117,7 @@ void EnHeishi1_Init(Actor* thisx, PlayState* play2) {
             Actor_Kill(&this->actor);
         }
     } else {
+      //if ((!IS_DAY || GET_EVENTCHKINF(EVENTCHKINF_80)) && !GET_EVENTCHKINF(EVENTCHKINF_C4)) {
         if ((gSaveContext.save.dayTime > CLOCK_TIME(17, 18) - 1) || !IS_DAY || GET_EVENTCHKINF(EVENTCHKINF_80)) {
             this->actionFunc = EnHeishi1_SetupWaitNight;
         } else {

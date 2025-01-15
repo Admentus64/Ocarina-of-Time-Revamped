@@ -342,6 +342,34 @@ void EnSyatekiMan_EndGame(EnSyatekiMan* this, PlayState* play) {
                 case SYATEKI_RESULT_WINNER:
                     this->tempGallery = this->actor.parent;
                     this->actor.parent = NULL;
+                  /*if (gSaveContext.save.entranceIndex > ENTR_SHOOTING_GALLERY_0_3) {
+                        if (!GET_ITEMGETINF(ITEMGETINF_0D)) {
+                            PRINTF(VT_FGCOL(GREEN) "☆☆☆☆☆ Equip_Pachinko ☆☆☆☆☆ %d\n" VT_RST, CUR_UPG_VALUE(UPG_BULLET_BAG));
+                            switch (CUR_UPG_VALUE(UPG_BULLET_BAG)) {
+                                case 1:
+                                    this->getItemId = GI_BULLET_BAG_40;
+                                    break;
+                                case 2:
+                                    this->getItemId = GI_BULLET_BAG_50;
+                                    break;
+                            }
+                        }
+                        else this->getItemId = GI_RUPEE_PURPLE;
+                    }
+                    else {
+                        if (!GET_ITEMGETINF(ITEMGETINF_0E)) {
+                            PRINTF(VT_FGCOL(GREEN) "☆☆☆☆☆ Equip_Bow ☆☆☆☆☆ %d\n" VT_RST, CUR_UPG_VALUE(UPG_QUIVER));
+                            switch (CUR_UPG_VALUE(UPG_QUIVER)) {
+                                case 1:
+                                    this->getItemId = GI_QUIVER_40;
+                                    break;
+                                case 2:
+                                    this->getItemId = GI_QUIVER_50;
+                                    break;
+                            }
+                        }
+                        else this->getItemId = GI_RUPEE_PURPLE;
+                    }*/
                     if (!LINK_IS_ADULT) {
                         if (!GET_ITEMGETINF(ITEMGETINF_0D)) {
                             PRINTF(VT_FGCOL(GREEN) "☆☆☆☆☆ Equip_Pachinko ☆☆☆☆☆ %d\n" VT_RST,
@@ -410,6 +438,7 @@ void EnSyatekiMan_FinishPrize(EnSyatekiMan* this, PlayState* play) {
     if ((Message_GetState(&play->msgCtx) == TEXT_STATE_DONE) && Message_ShouldAdvance(play)) {
         // "Successful completion"
         PRINTF(VT_FGCOL(GREEN) "☆☆☆☆☆ 正常終了 ☆☆☆☆☆ \n" VT_RST);
+      //if (gSaveContext.save.entranceIndex != ENTR_SHOOTING_GALLERY_0) {
         if (!LINK_IS_ADULT) {
             SET_ITEMGETINF(ITEMGETINF_0D);
         } else if ((this->getItemId == GI_QUIVER_40) || (this->getItemId == GI_QUIVER_50)) {

@@ -65,6 +65,7 @@ s32 func_808B1AE0(BgSpot09Obj* this, PlayState* play) {
 
     carpentersRescued = GET_EVENTCHKINF_CARPENTERS_ALL_RESCUED();
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45) && play->sceneId != SCENE_MARKET_DAY && play->sceneId != SCENE_MARKET_NIGHT) {
     if (LINK_AGE_IN_YEARS == YEARS_ADULT) {
         switch (this->dyna.actor.params) {
             case 0:

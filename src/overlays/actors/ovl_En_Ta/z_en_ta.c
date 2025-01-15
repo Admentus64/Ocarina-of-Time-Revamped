@@ -142,9 +142,9 @@ void EnTa_Init(Actor* thisx, PlayState* play2) {
     Collider_SetCylinder(play, &this->collider, &this->actor, &sCylinderInit);
 
     this->actor.colChkInfo.mass = MASS_IMMOVABLE;
-    this->stateFlags = 0;
-    this->rapidBlinks = 0;
-    this->nodOffTimer = 0;
+    this->stateFlags = 0;  //
+    this->rapidBlinks = 0; //
+    this->nodOffTimer = 0; //
     this->blinkTimer = 20;
     this->blinkFunc = EnTa_BlinkWaitUntilNext;
     Actor_SetScale(&this->actor, 0.01f);
@@ -157,9 +157,10 @@ void EnTa_Init(Actor* thisx, PlayState* play2) {
         case ENTA_IN_KAKARIKO:
             // "Exile Talon"
             PRINTF(VT_FGCOL(CYAN) " 追放タロン \n" VT_RST);
+          //if (GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_KAKARIKO) || !GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE) || !GET_EVENTCHKINF(EVENTCHKINF_45)) {
             if (GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_KAKARIKO)) {
-                Actor_Kill(&this->actor);
-            } else if (!LINK_IS_ADULT) {
+                Actor_Kill(&this->actor); //
+            } else if (!LINK_IS_ADULT) {  //
                 Actor_Kill(&this->actor);
             } else if (GET_EVENTCHKINF(EVENTCHKINF_TALON_WOKEN_IN_KAKARIKO)) {
                 EnTa_SetupAction(this, EnTa_IdleAwakeInKakariko, EnTa_AnimRepeatCurrent);
@@ -180,8 +181,8 @@ void EnTa_Init(Actor* thisx, PlayState* play2) {
             PRINTF(VT_FGCOL(CYAN) " 出戻りタロン \n" VT_RST);
             if (!GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_KAKARIKO)) {
                 Actor_Kill(&this->actor);
-            } else if (!LINK_IS_ADULT) {
-                Actor_Kill(&this->actor);
+            } else if (!LINK_IS_ADULT) {  //
+                Actor_Kill(&this->actor); //
             } else if (play->sceneId == SCENE_STABLE && !IS_DAY) {
                 Actor_Kill(&this->actor);
                 PRINTF(VT_FGCOL(CYAN) " 夜はいない \n" VT_RST);
@@ -213,9 +214,10 @@ void EnTa_Init(Actor* thisx, PlayState* play2) {
                 }
             } else if (play->sceneId == SCENE_LON_LON_BUILDINGS) {
                 PRINTF(VT_FGCOL(CYAN) " ロンロン牧場の倉庫 の タロン\n" VT_RST);
+              //if ( (!GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_KAKARIKO) && GET_EVENTCHKINF(EVENTCHKINF_45)) || (!GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE) && !GET_EVENTCHKINF(EVENTCHKINF_45)) ) {
                 if (!GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE)) {
-                    Actor_Kill(&this->actor);
-                } else if (LINK_IS_ADULT) {
+                    Actor_Kill(&this->actor); //
+                } else if (LINK_IS_ADULT) {   //
                     Actor_Kill(&this->actor);
                 } else {
                     if (IS_DAY) {
@@ -312,6 +314,7 @@ void EnTa_SleepTalkInLonLonHouse(EnTa* this, PlayState* play) {
 }
 
 void EnTa_SetupAwake(EnTa* this) {
+  //if (gSaveContext.save.entranceIndex < ENTR_KAKARIKO_CENTER_GUEST_HOUSE_0 || gSaveContext.save.entranceIndex > ENTR_KAKARIKO_CENTER_GUEST_HOUSE_0_3) {
     if (!LINK_IS_ADULT) {
         EnTa_SetupAction(this, EnTa_IdleAwakeInCastle, EnTa_AnimRepeatCurrent);
         SET_EVENTCHKINF(EVENTCHKINF_TALON_WOKEN_IN_CASTLE);

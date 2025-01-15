@@ -2342,6 +2342,12 @@ void EnXc_Update(Actor* thisx, PlayState* play) {
 void EnXc_Init(Actor* thisx, PlayState* play) {
     EnXc* this = (EnXc*)thisx;
 
+  /*if (!GET_EVENTCHKINF(EVENTCHKINF_45)) {
+        EnXc_DoNothing(this, play);
+        Actor_Kill(&this->actor);
+        return;
+    }*/
+
     ActorShape_Init(&this->actor.shape, 0.0f, ActorShadow_DrawCircle, 30.0f);
     SkelAnime_InitFlex(play, &this->skelAnime, &gSheikSkel, &gSheikIdleAnim, this->jointTable, this->morphTable,
                        ARRAY_COUNT(this->jointTable));

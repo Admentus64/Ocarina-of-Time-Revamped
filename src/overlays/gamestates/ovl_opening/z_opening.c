@@ -9,7 +9,7 @@
 void TitleSetup_SetupTitleScreen(TitleSetupState* this) {
     gSaveContext.gameMode = GAMEMODE_TITLE_SCREEN;
     this->state.running = false;
-    gSaveContext.save.linkAge = LINK_AGE_ADULT;
+    gSaveContext.save.linkAge = LINK_AGE_ADULT; // LINK_AGE_CHILD;
     Sram_InitDebugSave();
     gSaveContext.save.cutsceneIndex = 0xFFF3;
     gSaveContext.sceneLayer = 7;

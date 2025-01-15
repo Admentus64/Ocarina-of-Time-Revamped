@@ -671,8 +671,8 @@ void func_80083108(PlayState* play) {
                     } else {
                         gSaveContext.save.info.equips.buttonItems[0] = ITEM_BOW;
                         if (play->shootingGalleryStatus > 1) {
-                            if (LINK_AGE_IN_YEARS == YEARS_CHILD) {
-                                gSaveContext.save.info.equips.buttonItems[0] = ITEM_SLINGSHOT;
+                            if (gSaveContext.save.entranceIndex == ENTR_SHOOTING_GALLERY_1 || gSaveContext.save.entranceIndex == ENTR_SHOOTING_GALLERY_1_1) {
+                                gSaveContext.save.info.equips.buttonItems[0] = player->heldItemId = ITEM_SLINGSHOT;
                             }
 
                             Interface_LoadItemIcon1(play, 0);

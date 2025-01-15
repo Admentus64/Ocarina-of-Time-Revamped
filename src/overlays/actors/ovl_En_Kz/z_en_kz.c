@@ -109,6 +109,7 @@ u16 EnKz_GetTextId(PlayState* play, Actor* thisx) {
         return textId;
     }
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (LINK_IS_ADULT) {
         return EnKz_GetTextIdAdult(play, this);
     } else {
@@ -302,6 +303,7 @@ void func_80A9CB18(EnKz* this, PlayState* play) {
             return;
         }
 
+      //if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
         if (LINK_IS_ADULT) {
             if ((INV_CONTENT(ITEM_TRADE_ADULT) == ITEM_PRESCRIPTION) &&
                 (Actor_GetPlayerExchangeItemId(play) == EXCH_ITEM_PRESCRIPTION)) {
@@ -319,11 +321,12 @@ void func_80A9CB18(EnKz* this, PlayState* play) {
 #endif
             if (GET_INFTABLE(INFTABLE_139)) {
                 this->actor.textId = CHECK_QUEST_ITEM(QUEST_SONG_SERENADE) ? 0x4045 : 0x401A;
-                player->actor.textId = this->actor.textId;
+                player->actor.textId = this->actor.textId; //
             } else {
                 this->actor.textId = CHECK_OWNED_EQUIP(EQUIP_TYPE_TUNIC, EQUIP_INV_TUNIC_ZORA) ? 0x401F : 0x4012;
-                player->actor.textId = this->actor.textId;
+                player->actor.textId = this->actor.textId; //
             }
+          //player->actor.textId = this->actor.textId;
         }
     }
 }
@@ -389,10 +392,12 @@ void EnKz_Init(Actor* thisx, PlayState* play) {
     this->interactInfo.talkState = NPC_TALK_STATE_IDLE;
     Animation_ChangeByInfo(&this->skelanime, sAnimationInfo, ENKZ_ANIM_0);
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_GAVE_LETTER_TO_KING_ZORA) || GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (GET_EVENTCHKINF(EVENTCHKINF_GAVE_LETTER_TO_KING_ZORA)) {
         EnKz_SetMovedPos(this, play);
     }
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (LINK_IS_ADULT) {
         if (!GET_INFTABLE(INFTABLE_138)) {
             Actor_SpawnAsChild(&play->actorCtx, &this->actor, play, ACTOR_BG_ICE_SHELTER, this->actor.world.pos.x,
@@ -421,6 +426,7 @@ void EnKz_PreMweepWait(EnKz* this, PlayState* play) {
 }
 
 void EnKz_SetupMweep(EnKz* this, PlayState* play) {
+  //Vec3s zeroVec = { 0, 0, 0 }; // unused
     Vec3f zeroVec = { 0.0f, 0.0f, 0.0f }; // unused
     Vec3f subCamAt;
     Vec3f subCamEye;
@@ -524,6 +530,7 @@ void EnKz_Update(Actor* thisx, PlayState* play) {
     EnKz* this = (EnKz*)thisx;
     s32 pad;
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !GET_INFTABLE(INFTABLE_138)) {
     if (LINK_IS_ADULT && !GET_INFTABLE(INFTABLE_138)) {
         SET_INFTABLE(INFTABLE_138);
     }

@@ -206,6 +206,7 @@ void EnHorseNormal_Init(Actor* thisx, PlayState* play) {
             Actor_Kill(&this->actor);
             return;
         }
+      //if (!GET_EVENTCHKINF(EVENTCHKINF_45)) {
         if (!LINK_IS_ADULT) {
             if (Flags_GetEventChkInf(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE)) {
                 if (this->actor.world.rot.z != 3) {
@@ -216,6 +217,7 @@ void EnHorseNormal_Init(Actor* thisx, PlayState* play) {
                 Actor_Kill(&this->actor);
                 return;
             }
+      //} else if (Flags_GetEventChkInf(EVENTCHKINF_EPONA_OBTAINED)) {
         } else if (Flags_GetEventChkInf(EVENTCHKINF_EPONA_OBTAINED) || R_DEBUG_FORCE_EPONA_OBTAINED) {
             if (this->actor.world.rot.z != 7) {
                 Actor_Kill(&this->actor);

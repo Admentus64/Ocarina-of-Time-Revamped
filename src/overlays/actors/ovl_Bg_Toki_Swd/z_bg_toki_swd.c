@@ -99,6 +99,7 @@ void func_808BAF40(BgTokiSwd* this, PlayState* play) {
         play->csCtx.script = gRevealMasterSwordCs;
         gSaveContext.cutsceneTrigger = 1;
     }
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (!LINK_IS_ADULT || GET_EVENTCHKINF(EVENTCHKINF_55)) {
         if (Actor_HasParent(&this->actor, play)) {
             if (!LINK_IS_ADULT) {
@@ -118,6 +119,7 @@ void func_808BAF40(BgTokiSwd* this, PlayState* play) {
             }
         }
     }
+  //else this->actor.draw = NULL;
     if (gSaveContext.sceneLayer == 5) {
         if (play->roomCtx.drawParams[0] > 0) {
             play->roomCtx.drawParams[0]--;

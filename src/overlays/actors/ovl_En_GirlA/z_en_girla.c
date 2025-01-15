@@ -214,9 +214,13 @@ static ShopItemEntry sShopItemEntries[] = {
     { OBJECT_GI_EGG, GID_EGG, func_8002EBCC, 100, 1, 0x00AE, 0x0099, GI_WEIRD_EGG, EnGirlA_CanBuy_WeirdEgg,
       EnGirlA_ItemGive_WeirdEgg, EnGirlA_BuyEvent_ShieldDiscount },
     /* SI_19 */
+  //{ OBJECT_GI_DEKUPOUCH, GID_BULLET_BAG, func_8002EBCC, 100, 1, 0x011A, 0x011B, GI_BULLET_BAG_40, EnGirlA_CanBuy_Unk19,
+  //  NULL, EnGirlA_BuyEvent_ObtainBombchuPack  },
     { OBJECT_GI_MILK, GID_BOTTLE_MILK_FULL, func_80A3C498, 10000, 1, 0x00B4, 0x0085, GI_NONE, EnGirlA_CanBuy_Unk19,
       EnGirlA_ItemGive_Unk19, EnGirlA_BuyEvent_ShieldDiscount },
     /* SI_20 */
+  //{ OBJECT_GI_DEKUPOUCH, GID_BULLET_BAG, func_8002EBCC, 100, 1, 0x011A, 0x011B, GI_BULLET_BAG_50, EnGirlA_CanBuy_Unk19,
+  //  NULL, EnGirlA_BuyEvent_ObtainBombchuPack  },
     { OBJECT_GI_EGG, GID_EGG, func_8002EBCC, 10000, 1, 0x00B5, 0x0085, GI_NONE, EnGirlA_CanBuy_Unk20,
       EnGirlA_ItemGive_Unk20, EnGirlA_BuyEvent_ShieldDiscount },
     /* SI_BOMBCHU_10_1 */
@@ -323,6 +327,17 @@ s32 EnGirlA_TryChangeShopItem(EnGirlA* this) {
                 return true;
             }
             break;
+      /*case SI_19:
+        case SI_20:
+            if (GET_ITEMGETINF(0x20)) {
+                this->actor.params = SI_DEKU_NUTS_5;
+                return true;
+            }
+            if (CUR_UPG_VALUE(UPG_BULLET_BAG) == 2) {
+                this->actor.params = SI_20;
+                return true;
+            }
+            break;*/
         case SI_BOMBCHU_10_2:
             if (GET_ITEMGETINF(ITEMGETINF_06)) {
                 this->actor.params = SI_SOLD_OUT;
@@ -565,25 +580,26 @@ s32 EnGirlA_CanBuy_DekuShield(PlayState* play, EnGirlA* this) {
 }
 
 s32 EnGirlA_CanBuy_GoronTunic(PlayState* play, EnGirlA* this) {
-    if (LINK_AGE_IN_YEARS == YEARS_CHILD) {
-        return CANBUY_RESULT_CANT_GET_NOW;
-    }
+    if (LINK_AGE_IN_YEARS == YEARS_CHILD) { //
+        return CANBUY_RESULT_CANT_GET_NOW;  //
+    }                                       //
     if (CHECK_OWNED_EQUIP_ALT(EQUIP_TYPE_TUNIC, EQUIP_INV_TUNIC_GORON)) {
         return CANBUY_RESULT_CANT_GET_NOW;
     }
     if (gSaveContext.save.info.playerData.rupees < this->basePrice) {
         return CANBUY_RESULT_NEED_RUPEES;
     }
-    if (Item_CheckObtainability(ITEM_TUNIC_GORON) == ITEM_NONE) {
-        return CANBUY_RESULT_SUCCESS_FANFARE;
-    }
+    if (Item_CheckObtainability(ITEM_TUNIC_GORON) == ITEM_NONE) { //
+        return CANBUY_RESULT_SUCCESS_FANFARE;                     //
+    }                                                             //
+  //return CANBUY_RESULT_SUCCESS_FANFARE;
     return CANBUY_RESULT_SUCCESS;
 }
 
 s32 EnGirlA_CanBuy_ZoraTunic(PlayState* play, EnGirlA* this) {
-    if (LINK_AGE_IN_YEARS == YEARS_CHILD) {
-        return CANBUY_RESULT_CANT_GET_NOW;
-    }
+    if (LINK_AGE_IN_YEARS == YEARS_CHILD) { //
+        return CANBUY_RESULT_CANT_GET_NOW;  //
+    }                                       //
     if (CHECK_OWNED_EQUIP_ALT(EQUIP_TYPE_TUNIC, EQUIP_INV_TUNIC_ZORA)) {
         return CANBUY_RESULT_CANT_GET_NOW;
     }
@@ -627,6 +643,13 @@ s32 EnGirlA_CanBuy_WeirdEgg(PlayState* play, EnGirlA* this) {
 }
 
 s32 EnGirlA_CanBuy_Unk19(PlayState* play, EnGirlA* this) {
+    /*if (gSaveContext.save.info.playerData.rupees < this->basePrice) {
+        return CANBUY_RESULT_NEED_RUPEES;
+    }
+    if (CUR_CAPACITY(UPG_BULLET_BAG) == 0) {
+        return CANBUY_RESULT_CANT_GET_NOW;
+    }
+    return CANBUY_RESULT_SUCCESS_FANFARE;*/
     return CANBUY_RESULT_NEED_RUPEES;
 }
 
@@ -798,7 +821,7 @@ void EnGirlA_ItemGive_WeirdEgg(PlayState* play, EnGirlA* this) {
 }
 
 void EnGirlA_ItemGive_Unk19(PlayState* play, EnGirlA* this) {
-    Rupees_ChangeBy(-this->basePrice);
+    Rupees_ChangeBy(-this->basePrice); //
 }
 
 void EnGirlA_ItemGive_Unk20(PlayState* play, EnGirlA* this) {
@@ -862,6 +885,25 @@ void EnGirlA_BuyEvent_ZoraTunic(PlayState* play, EnGirlA* this) {
 }
 
 void EnGirlA_BuyEvent_ObtainBombchuPack(PlayState* play, EnGirlA* this) {
+    /*u8 params = this->actor.params;
+    if (params == SI_19 || params == SI_20)
+        SET_ITEMGETINF(0x20);
+    else if (params == SI_BOMBCHU_10_2)
+        SET_ITEMGETINF(ITEMGETINF_06);
+    else if (params == SI_BOMBCHU_10_3)
+        SET_ITEMGETINF(ITEMGETINF_07);
+    if (params == SI_BOMBCHU_20_3)
+        SET_ITEMGETINF(ITEMGETINF_08);
+    if (params == SI_BOMBCHU_20_4)
+        SET_ITEMGETINF(ITEMGETINF_09);
+    if (params == SI_BOMBCHU_10_4)
+        SET_ITEMGETINF(ITEMGETINF_0A);
+    if (params == SI_BOMBCHU_10_1)
+        SET_ITEMGETINF(ITEMGETINF_03);
+    if (params == SI_BOMBCHU_20_1)
+        SET_ITEMGETINF(ITEMGETINF_04);
+    if (params == SI_BOMBCHU_20_2)
+        SET_ITEMGETINF(ITEMGETINF_05);*/
     switch (this->actor.params) {
         case SI_BOMBCHU_10_2:
             SET_ITEMGETINF(ITEMGETINF_06);

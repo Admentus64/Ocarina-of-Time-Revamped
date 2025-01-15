@@ -85,15 +85,16 @@ void EnFu_Init(Actor* thisx, PlayState* play) {
     Collider_SetCylinder(play, &this->collider, &this->actor, &sCylinderInit);
     this->actor.colChkInfo.mass = MASS_IMMOVABLE;
     Actor_SetScale(&this->actor, 0.01f);
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_54) || GET_EVENTCHKINF(EVENTCHKINF_DRAINED_WELL)) {
     if (!LINK_IS_ADULT) {
         this->actionFunc = EnFu_WaitChild;
-        this->facialExpression = FU_FACE_CALM;
+        this->facialExpression = FU_FACE_CALM; //
     } else {
         this->actionFunc = EnFu_WaitAdult;
         this->facialExpression = FU_FACE_MAD;
         this->skelanime.playSpeed = 2.0f;
     }
-    this->behaviorFlags = 0;
+    this->behaviorFlags = 0; //
     this->actor.attentionRangeType = ATTENTION_RANGE_6;
 }
 
@@ -112,6 +113,7 @@ s32 func_80A1D94C(EnFu* this, PlayState* play, u16 textId, EnFuActionFunc action
     this->actor.textId = textId;
     yawDiff = this->actor.yawTowardsPlayer - this->actor.shape.rot.y;
 
+  //if ((ABS(this->actor.yawTowardsPlayer - this->actor.shape.rot.y) < 0x2301) && (this->actor.xzDistToPlayer < 100.0f)) {
     if ((ABS(yawDiff) < 0x2301) && (this->actor.xzDistToPlayer < 100.0f)) {
         Actor_OfferTalk(&this->actor, play, 100.0f);
     } else {
@@ -226,6 +228,7 @@ void EnFu_WaitAdult(EnFu* this, PlayState* play) {
         this->behaviorFlags |= FU_WAIT;
     } else if (Actor_TalkOfferAccepted(&this->actor, play)) {
         this->actionFunc = func_80A1DBA0;
+  //} else if (ABS(this->actor.yawTowardsPlayer - this->actor.shape.rot.y) < 0x2031 && this->actor.textId != 0xFFFF) {
     } else if (ABS(yawDiff) < 0x2301) {
         if (this->actor.xzDistToPlayer < 100.0f) {
             this->actor.textId = 0x5034;

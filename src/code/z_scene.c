@@ -481,7 +481,7 @@ BAD_RETURN(s32) Scene_CommandMiscSettings(PlayState* play, SceneCmd* cmd) {
     gSaveContext.worldMapArea = cmd->miscSettings.area;
 
     if ((play->sceneId == SCENE_BAZAAR) || (play->sceneId == SCENE_SHOOTING_GALLERY)) {
-        if (LINK_AGE_IN_YEARS == YEARS_ADULT) {
+        if (gSaveContext.save.entranceIndex == ENTR_BAZAAR_0 || gSaveContext.save.entranceIndex == ENTR_SHOOTING_GALLERY_0) {
             gSaveContext.worldMapArea = WORLD_MAP_AREA_KAKARIKO_VILLAGE;
         }
     }

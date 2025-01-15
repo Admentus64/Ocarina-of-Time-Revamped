@@ -97,16 +97,19 @@ void EnToryo_Init(Actor* thisx, PlayState* play) {
 
     switch (play->sceneId) {
         case SCENE_GERUDO_VALLEY:
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && play->sceneId != SCENE_MARKET_DAY && play->sceneId != SCENE_MARKET_NIGHT && play->sceneId != SCENE_MARKET_RUINS && play->sceneId != SCENE_MARKET_ENTRANCE_DAY && play->sceneId != SCENE_MARKET_ENTRANCE_NIGHT && play->sceneId != SCENE_MARKET_ENTRANCE_RUINS && play->sceneId != SCENE_BACK_ALLEY_DAY) {
             if (LINK_AGE_IN_YEARS == YEARS_ADULT) {
                 this->stateFlags |= 1;
             }
             break;
         case SCENE_KAKARIKO_VILLAGE:
+          //if (!GET_EVENTCHKINF(EVENTCHKINF_45) && IS_DAY) {
             if ((LINK_AGE_IN_YEARS == YEARS_CHILD) && IS_DAY) {
                 this->stateFlags |= 2;
             }
             break;
         case SCENE_KAKARIKO_CENTER_GUEST_HOUSE:
+          //if (!GET_EVENTCHKINF(EVENTCHKINF_45) && IS_NIGHT) {
             if ((LINK_AGE_IN_YEARS == YEARS_CHILD) && IS_NIGHT) {
                 this->stateFlags |= 4;
             }

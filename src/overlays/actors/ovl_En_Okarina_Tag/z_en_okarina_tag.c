@@ -85,6 +85,7 @@ void EnOkarinaTag_Init(Actor* thisx, PlayState* play) {
                 this->actionFunc = func_80ABEF2C;
                 break;
             case 2:
+              //if (!GET_EVENTCHKINF(EVENTCHKINF_5B)) {
                 if (LINK_IS_ADULT) {
                     Actor_Kill(&this->actor);
                     break;
@@ -100,7 +101,7 @@ void EnOkarinaTag_Init(Actor* thisx, PlayState* play) {
                 this->actionFunc = func_80ABF708;
                 break;
             default:
-                Actor_Kill(&this->actor);
+                Actor_Kill(&this->actor); //
                 break;
         }
     }

@@ -289,6 +289,7 @@ void Horse_SetupInCutscene(PlayState* play, Player* player) {
  * This function should be called during `Play_Init`.
  */
 void Horse_InitPlayerHorse(PlayState* play, Player* player) {
+  //if (true) {
     if (LINK_IS_ADULT) {
         if (!Horse_CanSpawn(gSaveContext.save.info.horseData.sceneId)) {
             PRINTF_COLOR_ERROR();

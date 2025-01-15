@@ -46,6 +46,7 @@ void BgSpot01Idosoko_Init(Actor* thisx, PlayState* play) {
     Actor_ProcessInitChain(&this->dyna.actor, sInitChain);
     CollisionHeader_GetVirtual(&gKakarikoBOTWStoneCol, &colHeader);
     this->dyna.bgId = DynaPoly_SetBgActor(play, &play->colCtx.dyna, &this->dyna.actor, colHeader);
+  //if (GET_EVENTCHKINF(EVENTCHKINF_DRAINED_WELL)) {
     if (!LINK_IS_ADULT) {
         Actor_Kill(&this->dyna.actor);
     } else {

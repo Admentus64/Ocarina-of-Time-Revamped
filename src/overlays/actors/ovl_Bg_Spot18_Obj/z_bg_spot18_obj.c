@@ -91,6 +91,8 @@ static Gfx(*sDlists[]) = {
 s32 func_808B8910(BgSpot18Obj* this, PlayState* play) {
     s32 age;
 
+
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45) && gSaveContext.sceneLayer >= 0) {
     if (LINK_AGE_IN_YEARS == YEARS_ADULT) {
         age = 1;
     } else if (LINK_AGE_IN_YEARS == YEARS_CHILD) {

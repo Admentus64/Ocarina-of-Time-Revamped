@@ -128,7 +128,8 @@ void EnDaikuKakariko_Init(Actor* thisx, PlayState* play) {
     EnDaikuKakariko* this = (EnDaikuKakariko*)thisx;
     s32 pad;
 
-    if (LINK_AGE_IN_YEARS == YEARS_CHILD) {
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_45) && play->sceneId != SCENE_MARKET_DAY && play->sceneId != SCENE_MARKET_NIGHT && this->flags != 0xFF) {
+    if (LINK_AGE_IN_YEARS == YEARS_CHILD) {    
         switch (play->sceneId) {
             case SCENE_KAKARIKO_VILLAGE:
                 if (IS_DAY) {

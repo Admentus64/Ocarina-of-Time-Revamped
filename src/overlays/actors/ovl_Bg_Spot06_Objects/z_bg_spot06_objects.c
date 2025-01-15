@@ -108,6 +108,7 @@ void BgSpot06Objects_Init(Actor* thisx, PlayState* play) {
             CollisionHeader_GetVirtual(&gLakeHyliaWaterTempleGateCol, &colHeader);
             this->dyna.bgId = DynaPoly_SetBgActor(play, &play->colCtx.dyna, thisx, colHeader);
 
+          //if (!LINK_IS_ADULT && Flags_GetSwitch(play, this->switchFlag)) {
             if (LINK_IS_ADULT && Flags_GetSwitch(play, this->switchFlag)) {
                 thisx->world.pos.y = thisx->home.pos.y + 120.0f;
                 this->actionFunc = BgSpot06Objects_DoNothing;
@@ -123,6 +124,7 @@ void BgSpot06Objects_Init(Actor* thisx, PlayState* play) {
             Collider_InitJntSph(play, &this->collider);
             Collider_SetJntSph(play, &this->collider, thisx, &sJntSphInit, this->colliderItem);
 
+          //if (!LINK_IS_ADULT && Flags_GetSwitch(play, this->switchFlag)) {
             if (LINK_IS_ADULT && Flags_GetSwitch(play, this->switchFlag)) {
                 if (!GET_EVENTCHKINF(EVENTCHKINF_RESTORED_LAKE_HYLIA)) {
                     thisx->home.pos.y = thisx->world.pos.y = WATER_LEVEL_LOWERED;
@@ -150,6 +152,7 @@ void BgSpot06Objects_Init(Actor* thisx, PlayState* play) {
             Actor_ProcessInitChain(thisx, sInitChainWaterPlane);
             thisx->flags = ACTOR_FLAG_UPDATE_CULLING_DISABLED | ACTOR_FLAG_DRAW_CULLING_DISABLED;
 
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !GET_EVENTCHKINF(EVENTCHKINF_RESTORED_LAKE_HYLIA)) {
             if (LINK_IS_ADULT && !GET_EVENTCHKINF(EVENTCHKINF_RESTORED_LAKE_HYLIA)) {
                 if (!IS_CUTSCENE_LAYER) {
                     this->lakeHyliaWaterLevel = -681.0f;

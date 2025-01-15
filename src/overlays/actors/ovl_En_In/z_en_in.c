@@ -193,6 +193,7 @@ u16 EnIn_GetTextId(PlayState* play, Actor* thisx) {
     if (textId != 0) {
         return textId;
     }
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (!LINK_IS_ADULT) {
         return EnIn_GetTextIdChild(play);
     } else {
@@ -361,6 +362,7 @@ void EnIn_ChangeAnim(EnIn* this, s32 index) {
 }
 
 s32 func_80A7975C(EnIn* this, PlayState* play) {
+  //if (this->actor.params != 1 || this->actor.shape.rot.z != 1 || !GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (this->actor.params != 1 || this->actor.shape.rot.z != 1 || !LINK_IS_ADULT) {
         return 0;
     }
@@ -373,14 +375,17 @@ s32 func_80A7975C(EnIn* this, PlayState* play) {
 }
 
 s32 EnIn_GetStartMode(EnIn* this, PlayState* play) {
+  //if (play->sceneId == SCENE_LON_LON_RANCH && !GET_EVENTCHKINF(EVENTCHKINF_45) && IS_DAY && this->actor.shape.rot.z == 1 &&
     if (play->sceneId == SCENE_LON_LON_RANCH && LINK_IS_CHILD && IS_DAY && this->actor.shape.rot.z == 1 &&
         !GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE)) {
         return ENIN_START_MODE_1;
     }
+  //if (play->sceneId == SCENE_STABLE && !GET_EVENTCHKINF(EVENTCHKINF_45) && IS_DAY && this->actor.shape.rot.z == 3 &&
     if (play->sceneId == SCENE_STABLE && LINK_IS_CHILD && IS_DAY && this->actor.shape.rot.z == 3 &&
         GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE)) {
         return ENIN_START_MODE_1;
     }
+  //if (play->sceneId == SCENE_STABLE && !GET_EVENTCHKINF(EVENTCHKINF_45) && IS_NIGHT) {
     if (play->sceneId == SCENE_STABLE && LINK_IS_CHILD && IS_NIGHT) {
         if ((this->actor.shape.rot.z == 2) && !GET_EVENTCHKINF(EVENTCHKINF_TALON_RETURNED_FROM_CASTLE)) {
             return ENIN_START_MODE_1;
@@ -389,6 +394,24 @@ s32 EnIn_GetStartMode(EnIn* this, PlayState* play) {
             return ENIN_START_MODE_1;
         }
     }
+  /*if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
+        if (play->sceneId == SCENE_LON_LON_RANCH && GET_EVENTCHKINF(EVENTCHKINF_45) && IS_DAY) {
+            if ((this->actor.shape.rot.z == 5) && !GET_EVENTCHKINF(EVENTCHKINF_EPONA_OBTAINED)) {
+                return ENIN_START_MODE_2;
+            }
+            if ((this->actor.shape.rot.z == 7) && GET_EVENTCHKINF(EVENTCHKINF_EPONA_OBTAINED)) {
+                return ENIN_START_MODE_4;
+            }
+        }
+        if (play->sceneId == SCENE_LON_LON_BUILDINGS && IS_NIGHT) {
+            if (this->actor.shape.rot.z == 6 && !GET_EVENTCHKINF(EVENTCHKINF_EPONA_OBTAINED)) {
+                return ENIN_START_MODE_3;
+            }
+            if (this->actor.shape.rot.z == 8 && GET_EVENTCHKINF(EVENTCHKINF_EPONA_OBTAINED)) {
+                return ENIN_START_MODE_3;
+            }
+        }
+    }*/
     if (play->sceneId == SCENE_LON_LON_RANCH && LINK_IS_ADULT && IS_DAY) {
         if ((this->actor.shape.rot.z == 5) && !GET_EVENTCHKINF(EVENTCHKINF_EPONA_OBTAINED)) {
             return ENIN_START_MODE_2;
