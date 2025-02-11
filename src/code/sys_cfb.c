@@ -27,12 +27,12 @@ void SysCfb_Init(s32 n64dd) {
 #if DEBUG_FEATURES
             sSysCfbEnd = tmpFbEnd;
 #else
-            sSysCfbEnd = 0x80400000; // 0x80800000
+            sSysCfbEnd = 0x80400000; // 0x80600000
 #endif
         }
-    } else if (osMemSize >= 0x400000) {
+    } else if (osMemSize >= 0x400000) { // 0x600000
         PRINTF("RAM4M mode\n");
-        sSysCfbEnd = 0x80400000;
+        sSysCfbEnd = 0x80400000; // 0x80600000
     } else {
         LogUtils_HungupThread("../sys_cfb.c", LN4(305, 308, 322, 341, 354));
     }

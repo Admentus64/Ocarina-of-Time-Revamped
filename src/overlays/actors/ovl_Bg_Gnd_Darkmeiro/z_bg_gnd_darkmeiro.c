@@ -5,6 +5,7 @@
  */
 
 #include "z_bg_gnd_darkmeiro.h"
+//#include "assets/objects/object_oB4/object_oB4.h"
 #include "assets/objects/object_demo_kekkai/object_demo_kekkai.h"
 
 #define FLAGS (ACTOR_FLAG_UPDATE_CULLING_DISABLED | ACTOR_FLAG_DRAW_CULLING_DISABLED)
@@ -25,6 +26,7 @@ ActorProfile Bg_Gnd_Darkmeiro_Profile = {
     /**/ ACTOR_BG_GND_DARKMEIRO,
     /**/ ACTORCAT_PROP,
     /**/ FLAGS,
+    /**/ // OBJECT_OB4,
     /**/ OBJECT_DEMO_KEKKAI,
     /**/ sizeof(BgGndDarkmeiro),
     /**/ BgGndDarkmeiro_Init,
@@ -58,6 +60,7 @@ void BgGndDarkmeiro_Init(Actor* thisx, PlayState* play2) {
             this->dyna.actor.flags |= ACTOR_FLAG_REACT_TO_LENS;
             break;
         case DARKMEIRO_CLEAR_BLOCK:
+          //CollisionHeader_GetVirtual(&gClearBlockCol_new, &colHeader);
             CollisionHeader_GetVirtual(&gClearBlockCol, &colHeader);
             this->dyna.bgId = DynaPoly_SetBgActor(play, &play->colCtx.dyna, &this->dyna.actor, colHeader);
             if (PARAMS_GET_U(this->dyna.actor.params, 8, 6) == 0x3F) {
@@ -179,6 +182,7 @@ void BgGndDarkmeiro_Update(Actor* thisx, PlayState* play2) {
 }
 
 void BgGndDarkmeiro_DrawInvisiblePath(Actor* thisx, PlayState* play) {
+  //Gfx_DrawDListXlu(play, gShadowTrialPathDL_new);
     Gfx_DrawDListXlu(play, gShadowTrialPathDL);
 }
 
@@ -204,6 +208,7 @@ void BgGndDarkmeiro_DrawSwitchBlock(Actor* thisx, PlayState* play) {
         gDPSetPrimColor(POLY_XLU_DISP++, 0, 0, 198, 202, 208, this->timer2);
         CLOSE_DISPS(play->state.gfxCtx, "../z_bg_gnd_darkmeiro.c", 380);
 
+      //Gfx_DrawDListXlu(play, gClearBlockDL_new);
         Gfx_DrawDListXlu(play, gClearBlockDL);
     }
 }
@@ -213,5 +218,6 @@ void BgGndDarkmeiro_DrawStaticBlock(Actor* thisx, PlayState* play) {
     gDPSetPrimColor(POLY_XLU_DISP++, 0, 0, 198, 202, 208, 255);
     CLOSE_DISPS(play->state.gfxCtx, "../z_bg_gnd_darkmeiro.c", 393);
 
+  //Gfx_DrawDListXlu(play, gClearBlockDL_new);
     Gfx_DrawDListXlu(play, gClearBlockDL);
 }

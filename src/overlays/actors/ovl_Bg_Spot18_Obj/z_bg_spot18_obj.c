@@ -155,6 +155,7 @@ s32 func_808B8B38(BgSpot18Obj* this, PlayState* play) {
 s32 func_808B8BB4(BgSpot18Obj* this, PlayState* play) {
     Actor_ProcessInitChain(&this->dyna.actor, sInitChain1);
 
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_45) && gSaveContext.sceneLayer >= 0) {
     if (LINK_AGE_IN_YEARS == YEARS_CHILD) {
         func_808B9030(this);
     } else if (Flags_GetSwitch(play, PARAMS_GET_U(this->dyna.actor.params, 8, 6))) {

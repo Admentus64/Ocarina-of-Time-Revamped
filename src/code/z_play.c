@@ -325,20 +325,38 @@ void Play_Init(GameState* thisx) {
         gSaveContext.skyboxTime = gSaveContext.nextDayTime;
     }
 
-    gSaveContext.save.nightFlag = gSaveContext.sceneLayer = (gSaveContext.save.dayTime > CLOCK_TIME(18, 0) || gSaveContext.save.dayTime < CLOCK_TIME(6, 30));
+  //gSaveContext.save.nightFlag = gSaveContext.sceneLayer = (gSaveContext.save.dayTime > CLOCK_TIME(18, 0) || gSaveContext.save.dayTime < CLOCK_TIME(6, 30));
+    if (gSaveContext.save.dayTime > CLOCK_TIME(18, 0) || gSaveContext.save.dayTime < CLOCK_TIME(6, 30)) {
+        gSaveContext.save.nightFlag = 1;
+    } else {
+        gSaveContext.save.nightFlag = 0;
+    }
 
     Cutscene_HandleConditionalTriggers(this);
 
+  /*if (gSaveContext.gameMode != GAMEMODE_NORMAL || gSaveContext.save.cutsceneIndex >= 0xFFF0) {
+        gSaveContext.nayrusLoveTimer = 0;
+        Magic_Reset(this);
+        gSaveContext.sceneLayer = SCENE_LAYER_CUTSCENE_FIRST + (gSaveContext.save.cutsceneIndex & 0xF);
+    }*/
     if (gSaveContext.gameMode != GAMEMODE_NORMAL || gSaveContext.save.cutsceneIndex >= 0xFFF0) {
         gSaveContext.nayrusLoveTimer = 0;
         Magic_Reset(this);
         gSaveContext.sceneLayer = SCENE_LAYER_CUTSCENE_FIRST + (gSaveContext.save.cutsceneIndex & 0xF);
+    } else if (!LINK_IS_ADULT && IS_DAY) {
+        gSaveContext.sceneLayer = SCENE_LAYER_CHILD_DAY;
+    } else if (!LINK_IS_ADULT && !IS_DAY) {
+        gSaveContext.sceneLayer = SCENE_LAYER_CHILD_NIGHT;
+    } else if (LINK_IS_ADULT && IS_DAY) {
+        gSaveContext.sceneLayer = SCENE_LAYER_ADULT_DAY;
+    } else {
+        gSaveContext.sceneLayer = SCENE_LAYER_ADULT_NIGHT;
     }
 
     // save the base scene layer (before accounting for the special cases below) to use later for the transition type
     baseSceneLayer = gSaveContext.sceneLayer;
 
-    if (!IS_CUTSCENE_LAYER) {
+  /*if (!IS_CUTSCENE_LAYER) {
         u8 sceneId = gEntranceTable[((void)0, gSaveContext.save.entranceIndex)].sceneId;
         if ((GET_EVENTCHKINF(EVENTCHKINF_45) && sceneId >= SCENE_TEMPLE_OF_TIME) || gSaveContext.save.entranceIndex == ENTR_BAZAAR_0 || gSaveContext.save.entranceIndex == ENTR_BAZAAR_0_1 || gSaveContext.save.entranceIndex == ENTR_BAZAAR_0_2) {
             if (sceneId == SCENE_KOKIRI_FOREST) 
@@ -352,6 +370,18 @@ void Play_Init(GameState* thisx) {
         }
         else if (sceneId == SCENE_HYRULE_FIELD)
             gSaveContext.sceneLayer = CHECK_QUEST_ITEM(QUEST_KOKIRI_EMERALD) && CHECK_QUEST_ITEM(QUEST_GORON_RUBY) && CHECK_QUEST_ITEM(QUEST_ZORA_SAPPHIRE);
+    }*/
+    if ((gEntranceTable[((void)0, gSaveContext.save.entranceIndex)].sceneId == SCENE_HYRULE_FIELD) && !LINK_IS_ADULT &&
+        !IS_CUTSCENE_LAYER) {
+        if (CHECK_QUEST_ITEM(QUEST_KOKIRI_EMERALD) && CHECK_QUEST_ITEM(QUEST_GORON_RUBY) &&
+            CHECK_QUEST_ITEM(QUEST_ZORA_SAPPHIRE)) {
+            gSaveContext.sceneLayer = 1;
+        } else {
+            gSaveContext.sceneLayer = 0;
+        }
+    } else if ((gEntranceTable[((void)0, gSaveContext.save.entranceIndex)].sceneId == SCENE_KOKIRI_FOREST) &&
+               LINK_IS_ADULT && !IS_CUTSCENE_LAYER) {
+        gSaveContext.sceneLayer = GET_EVENTCHKINF(EVENTCHKINF_48) ? 3 : 2;
     }
 
     Play_SpawnScene(

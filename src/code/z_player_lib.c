@@ -141,8 +141,8 @@ u8 sActionModelGroups[PLAYER_IA_MAX] = {
     PLAYER_MODELGROUP_DEFAULT,          // PLAYER_IA_NONE
     PLAYER_MODELGROUP_SWORD,            // PLAYER_IA_SWORD_CS
     PLAYER_MODELGROUP_10,               // PLAYER_IA_FISHING_POLE
-    PLAYER_MODELGROUP_SWORD_AND_SHIELD, // PLAYER_IA_SWORD_MASTER
-    PLAYER_MODELGROUP_CHILD_HYLIAN_SHIELD, // PLAYER_IA_SWORD_KOKIRI
+    PLAYER_MODELGROUP_CHILD_HYLIAN_SHIELD, // PLAYER_IA_SWORD_MASTER
+    PLAYER_MODELGROUP_SWORD_AND_SHIELD, // PLAYER_IA_SWORD_KOKIRI
     PLAYER_MODELGROUP_BGS,              // PLAYER_IA_SWORD_BIGGORON
     PLAYER_MODELGROUP_10,               // PLAYER_IA_DEKU_STICK
     PLAYER_MODELGROUP_HAMMER,           // PLAYER_IA_HAMMER
@@ -322,9 +322,9 @@ Gfx* D_80125D28[(PLAYER_SHIELD_MAX + 4) * 4] = {
     NULL,
     // PLAYER_SHIELD_DEKU (child, no sword)
     NULL,
-    gLinkChildDekuShieldSwordAndSheathNearDL,
-    gLinkChildDekuShieldSwordAndSheathNearDL,
-    gLinkChildDekuShieldSwordAndSheathNearDL,
+    gLinkChildDekuShieldWithMatrixDL,
+    gLinkChildDekuShieldWithMatrixDL,
+    gLinkChildDekuShieldWithMatrixDL,
     // PLAYER_SHIELD_HYLIAN (child, no sword)
     NULL,
     gLinkChildHerosShieldWithMtxDL,
@@ -390,7 +390,7 @@ Gfx* gPlayerLeftHandBgsDLs[] = {
     gLinkAdultHandHoldingBrokenGiantsKnifeDL,
     gLinkChildLeftHandHoldingBrokenSwordDL,
     gLinkAdultHandHoldingBrokenGiantsKnifeDL,
-    gLinkChildLeftHandHoldingMasterSwordDL
+    gLinkChildLeftHandHoldingMasterSwordDL,
 };
 
 Gfx* gPlayerLeftHandOpenDLs[] = {

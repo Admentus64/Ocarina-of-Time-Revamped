@@ -88,6 +88,10 @@ EntranceCutscene sEntranceCutsceneTable[] = {
     { ENTR_GORON_CITY_0, 2, EVENTCHKINF_A6, gGoronCityIntroCs },
     { ENTR_TEMPLE_OF_TIME_0, 2, EVENTCHKINF_A7, gTempleOfTimeIntroCs },
     { ENTR_DEKU_TREE_0, 2, EVENTCHKINF_A8, gDekuTreeIntroCs },
+  /*{ ENTR_HYRULE_FIELD_11, 2, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldSouthEponaJumpCs },
+    { ENTR_HYRULE_FIELD_13, 2, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldEastEponaJumpCs },
+    { ENTR_HYRULE_FIELD_12, 2, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldWestEponaJumpCs },
+    { ENTR_HYRULE_FIELD_15, 2, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldGateEponaJumpCs },*/
     { ENTR_HYRULE_FIELD_11, 0, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldSouthEponaJumpCs },
     { ENTR_HYRULE_FIELD_13, 0, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldEastEponaJumpCs },
     { ENTR_HYRULE_FIELD_12, 0, EVENTCHKINF_EPONA_OBTAINED, gHyruleFieldWestEponaJumpCs },

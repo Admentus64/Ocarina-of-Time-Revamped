@@ -49,8 +49,6 @@ extern Gfx gLinkChildRightHandNearDL[];
 extern Gfx gLinkChildRightHandClosedNearDL[];
 extern Gfx gLinkChildRightFistAndDekuShieldNearDL[];
 extern Gfx gLinkChildLeftFistAndBoomerangNearDL[];
-extern Gfx gLinkChildDekuShieldSwordAndSheathNearDL[];
-extern Gfx gLinkChildDekuShieldAndSheathNearDL[];
 extern Gfx gLinkChildLeftHandHoldingMasterSwordDL[];
 extern Gfx gLinkChildRightHandAndOotNearDL[];
 extern Gfx gLinkChildRightHandHoldingFairyOcarinaNearDL[];

@@ -564,6 +564,7 @@ void KaleidoScope_DrawEquipment(PlayState* play) {
             if (((u32)i == 0) && (k == 2) && (gSaveContext.save.info.playerData.bgsFlag != 0)) {
                 KaleidoScope_DrawQuadTextureRGBA32(play->state.gfxCtx, gItemIconSwordBiggoronTex, ITEM_ICON_WIDTH,
                                                    ITEM_ICON_HEIGHT, point);
+          //} else if ((i == 0) && (k == 2) && (gBitFlags[bit] & gSaveContext.save.info.inventory.equipment)) {
             } else if ((i == 0) && (k == 2) && (gBitFlags[bit + 1] & gSaveContext.save.info.inventory.equipment)) {
                 KaleidoScope_DrawQuadTextureRGBA32(play->state.gfxCtx, gItemIconBrokenGiantsKnifeTex, ITEM_ICON_WIDTH,
                                                    ITEM_ICON_HEIGHT, point);

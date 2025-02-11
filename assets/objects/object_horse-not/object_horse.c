@@ -328,9 +328,9 @@ u64 object_horse_Tex_002788[] = {
 #include "assets/objects/object_horse/tex_002788.rgba16.inc.c"
 };
 
-u8 object_horse_possiblePadding_002988[] = {
+/*u8 object_horse_possiblePadding_002988[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sEponaGallopAnimFrameData[] = {
     0x0000, 0xF853, 0x4000, 0x8507, 0x8C17, 0x01A1, 0x01C6, 0x0225, 0x02A6, 0x0334, 0x03B6, 0x0416, 0x042A, 0x03EE, 
@@ -436,9 +436,9 @@ AnimationHeader gEponaGallopAnim = {
     sEponaGallopAnimJointIndices, 5
 };
 
-u8 object_horse_possiblePadding_002FA8[] = {
+/*u8 object_horse_possiblePadding_002FA8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_0035B0FrameData[] = {
     0x0000, 0xF853, 0x4000, 0x8C17, 0x0272, 0xFE2E, 0xF5C0, 0xEFB4, 0xEDAE, 0xECFC, 0xEDA6, 0xEFB4, 0xF341, 0xF80A, 
@@ -660,9 +660,9 @@ AnimationHeader object_horse_Anim_003D38 = {
     object_horse_Anim_003D38JointIndices, 4
 };
 
-u8 object_horse_possiblePadding_003D48[] = {
+/*u8 object_horse_possiblePadding_003D48[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sEponaTrotAnimFrameData[] = {
     0x0000, 0xF853, 0x4000, 0x8507, 0x8C17, 0x13F6, 0x142E, 0x1474, 0x1490, 0x14A8, 0x14BB, 0x14C6, 0x14C8, 0x1490, 
@@ -771,9 +771,9 @@ AnimationHeader gEponaTrotAnim = {
     sEponaTrotAnimJointIndices, 5
 };
 
-u8 object_horse_possiblePadding_0043BC[] = {
+/*u8 object_horse_possiblePadding_0043BC[] = {
     0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_004DE8FrameData[] = {
     0x0000, 0x4000, 0x8C17, 0x0000, 0x0029, 0x004C, 0xFFE6, 0xFE77, 0xFB70, 0xF73B, 0xF2C6, 0xEF01, 0xECDA, 0xEBE4, 
@@ -916,9 +916,9 @@ AnimationHeader object_horse_Anim_004DE8 = {
     object_horse_Anim_004DE8JointIndices, 3
 };
 
-u8 object_horse_possiblePadding_004DF8[] = {
+/*u8 object_horse_possiblePadding_004DF8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_005F64FrameData[] = {
     0x0000, 0xF853, 0x4000, 0x8C17, 0x00C5, 0x00C7, 0x00D0, 0x00E0, 0x00F6, 0x0111, 0x012F, 0x0151, 0x0176, 0x019D, 
@@ -1127,9 +1127,9 @@ AnimationHeader object_horse_Anim_005F64 = {
     object_horse_Anim_005F64JointIndices, 4
 };
 
-u8 object_horse_possiblePadding_005F74[] = {
+/*u8 object_horse_possiblePadding_005F74[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sEponaIdleAnimFrameData[] = {
     0x0000, 0x1400, 0xF853, 0x4000, 0x8507, 0xEEE2, 0x8C17, 0x9348, 0x0BD1, 0xD20E, 0xD227, 0xD270, 0xD2E3, 0xD37C, 
@@ -1305,9 +1305,9 @@ AnimationHeader gEponaIdleAnim = {
     sEponaIdleAnimJointIndices, 9
 };
 
-u8 object_horse_possiblePadding_006D54[] = {
+/*u8 object_horse_possiblePadding_006D54[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sEponaWhinnyAnimFrameData[] = {
     0x0000, 0x1400, 0xF853, 0x4000, 0xD113, 0xEF5E, 0x8507, 0x8C17, 0x004D, 0x006F, 0x0091, 0x00B1, 0x00CE, 0x00E4, 
@@ -1422,9 +1422,9 @@ AnimationHeader gEponaWhinnyAnim = {
     sEponaWhinnyAnimJointIndices, 8
 };
 
-u8 object_horse_possiblePadding_007478[] = {
+/*u8 object_horse_possiblePadding_007478[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sEponaWalkAnimFrameData[] = {
     0x0000, 0xF853, 0x4000, 0x8507, 0xEEE2, 0x8C17, 0x1375, 0x1382, 0x13A5, 0x13D7, 0x140F, 0x1448, 0x1479, 0x149C, 
@@ -4052,9 +4052,9 @@ SkeletonHeader gEponaSkel = {
     gEponaSkelLimbs, ARRAY_COUNT(gEponaSkelLimbs)
 };
 
-u8 object_horse_possiblePadding_00A488[] = {
+/*u8 object_horse_possiblePadding_00A488[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_00A8DCFrameData[] = {
     0x0000, 0x1400, 0xF853, 0x4000, 0x8507, 0x8C17, 0x8000, 0x1400, 0x13AF, 0x137D, 0x1354, 0x1350, 0x133C, 0x1324, 
@@ -4144,9 +4144,9 @@ AnimationHeader object_horse_Anim_00A8DC = {
     object_horse_Anim_00A8DCJointIndices, 7
 };
 
-u8 object_horse_possiblePadding_00A8EC[] = {
+/*u8 object_horse_possiblePadding_00A8EC[] = {
     0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_00AD08FrameData[] = {
     0x0000, 0x10E2, 0xEFF8, 0x4000, 0x8507, 0x8C17, 0x8000, 0x10E2, 0x10E3, 0x1124, 0x1184, 0x11DA, 0x1210, 0x123C, 
@@ -4234,9 +4234,9 @@ AnimationHeader object_horse_Anim_00AD08 = {
     object_horse_Anim_00AD08JointIndices, 7
 };
 
-u8 object_horse_possiblePadding_00AD18[] = {
+/*u8 object_horse_possiblePadding_00AD18[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_00B3E0FrameData[] = {
     0x0000, 0x10E3, 0xEFFA, 0x4000, 0x8507, 0x8C17, 0x0DEF, 0x127F, 0x8000, 0x10E3, 0x10E2, 0x10DD, 0x10D6, 0x10CC, 
@@ -4714,9 +4714,9 @@ AnimationHeader object_horse_Anim_00D178 = {
     object_horse_Anim_00D178JointIndices, 8
 };
 
-u8 object_horse_possiblePadding_00D188[] = {
+/*u8 object_horse_possiblePadding_00D188[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 object_horse_Anim_00D4E8FrameData[] = {
     0x092A, 0x1637, 0x39F0, 0x1739, 0x0000, 0x4000, 0x8507, 0x42BC, 0x8C17, 0x8000, 0x1637, 0x162B, 0x155B, 0x1500, 
@@ -4797,9 +4797,9 @@ AnimationHeader object_horse_Anim_00D4E8 = {
     object_horse_Anim_00D4E8JointIndices, 10
 };
 
-u8 object_horse_possiblePadding_00D4F8[] = {
+/*u8 object_horse_possiblePadding_00D4F8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Gfx object_horse_DL_00D500[] = {
     gsDPPipeSync(),

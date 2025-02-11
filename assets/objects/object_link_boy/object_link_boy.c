@@ -3810,7 +3810,7 @@ Gfx gLinkAdultRightHandHoldingBowFirstPersonDL[] = {
     gsSPEndDisplayList(),
 };
 
-/*Gfx gLinkAdultRightHandHoldingHookshotFarDL[] = {
+Gfx gLinkAdultRightHandHoldingHookshotFarDL[] = {
     gsDPPipeSync(),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
@@ -3956,7 +3956,7 @@ Gfx gLinkAdultRightHandHoldingBowFirstPersonDL[] = {
     gsSP2Triangles(18, 19, 2, 0, 20, 21, 22, 0),
     gsSP2Triangles(10, 12, 20, 0, 23, 24, 11, 0),
     gsSPEndDisplayList(),
-};*/
+};
 
 Gfx gLinkAdultBottleDL[] = {
     gsDPPipeSync(),
@@ -3991,11 +3991,11 @@ Gfx gLinkAdultBottleDL[] = {
     gsSPEndDisplayList(),
 };
 
-/*Vtx object_link_boyVtx_02AE70[] = {
+Vtx object_link_boyVtx_02AE70[] = {
 #include "assets/objects/object_link_boy/object_link_boyVtx_02AE70.vtx.inc"
-};*/
+};
 
-/*Gfx gLinkAdultHookshotChainDL[] = {
+Gfx gLinkAdultHookshotChainDL[] = {
     gsDPPipeSync(),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
@@ -4014,7 +4014,7 @@ Gfx gLinkAdultBottleDL[] = {
     gsSP2Triangles(16, 17, 18, 0, 16, 19, 17, 0),
     gsSP2Triangles(20, 21, 22, 0, 20, 23, 21, 0),
     gsSPEndDisplayList(),
-};*/
+};
 
 Vtx object_link_boyVtx_02B0A8[] = {
 #include "assets/objects/object_link_boy/object_link_boyVtx_02B0A8.vtx.inc"
@@ -4035,11 +4035,11 @@ Gfx gLinkAdultBowStringDL[] = {
     gsSPEndDisplayList(),
 };
 
-/*Vtx object_link_boyVtx_02B168[] = {
+Vtx object_link_boyVtx_02B168[] = {
 #include "assets/objects/object_link_boy/object_link_boyVtx_02B168.vtx.inc"
-};*/
+};
 
-/*Gfx gLinkAdultHookshotTipDL[] = {
+Gfx gLinkAdultHookshotTipDL[] = {
     gsDPPipeSync(),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0x07D0, 0x09C4, 0, G_TX_RENDERTILE, G_ON),
@@ -4057,11 +4057,11 @@ Gfx gLinkAdultBowStringDL[] = {
     gsSP2Triangles(8, 7, 10, 0, 11, 12, 13, 0),
     gsSP1Triangle(12, 11, 14, 0),
     gsSPEndDisplayList(),
-};*/
+};
 
-/*u64 gLinkAdultHookshotChainTex[] = {
+u64 gLinkAdultHookshotChainTex[] = {
 #include "assets/objects/object_link_boy/hookshot_chain.rgba16.inc.c"
-};*/
+};
 
 Vtx object_link_boyVtx_02B738[] = {
 #include "assets/objects/object_link_boy/object_link_boyVtx_02B738.vtx.inc"
@@ -4095,11 +4095,11 @@ Gfx gLinkAdultBrokenGiantsKnifeBladeDL[] = {
 
 /*u64 gLinkAdultHookshotReticleTex[] = {
 #include "assets/objects/object_link_boy/hookshot_dot.i8.inc.c"
-};
+};*/
 
 Vtx object_link_boyVtx_02CB18[] = {
 #include "assets/objects/object_link_boy/object_link_boyVtx_02CB18.vtx.inc"
-};*/
+};
 
 /*Gfx gLinkAdultHookshotReticleDL[] = {
     gsSPMatrix(0x01000000, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
@@ -5787,4 +5787,3 @@ void* gLinkAdultSkelLimbs[] = {
 FlexSkeletonHeader gLinkAdultSkel = { 
     { gLinkAdultSkelLimbs, ARRAY_COUNT(gLinkAdultSkelLimbs) }, 18
 };
-

@@ -2733,22 +2733,15 @@ void Player_UpdateItems(Player* this, PlayState* play) {
 }
 
 s32 func_80834380(PlayState* play, Player* this, s32* itemPtr, s32* typePtr) {
-    if (this->heldItemAction != PLAYER_IA_SLINGSHOT) {
-        *itemPtr = ITEM_BOW;
-        if (!(this->stateFlags1 & PLAYER_STATE1_23) && !(this->stateFlags1 & PLAYER_STATE1_USING_BOOMERANG))
-            *typePtr = ARROW_NORMAL + (this->heldItemAction - PLAYER_IA_BOW);
-    } else {
-        *itemPtr = ITEM_SLINGSHOT;
-        *typePtr = ARROW_SEED;
-    }
+    u32 is_slingshot = this->heldItemAction == PLAYER_IA_SLINGSHOT;
+    *itemPtr = ITEM_BOW + (is_slingshot * 3);
+    *typePtr = is_slingshot ? ARROW_SEED : ARROW_NORMAL + (this->heldItemAction - PLAYER_IA_BOW);
+    if (this->stateFlags1 & PLAYER_STATE1_23)
+        *typePtr = ARROW_NORMAL_HORSE;
 
-    if (gSaveContext.minigameState == 1) {
-        return play->interfaceCtx.hbaAmmo;
-    } else if (play->shootingGalleryStatus != 0) {
-        return play->shootingGalleryStatus;
-    } else {
-        return AMMO(*itemPtr);
-    }
+    if (gSaveContext.minigameState == 1)
+        return (play->shootingGalleryStatus != 0) ? play->shootingGalleryStatus : play->interfaceCtx.hbaAmmo;
+    return AMMO(*itemPtr);
 }
 
 s32 func_8083442C(Player* this, PlayState* play) {

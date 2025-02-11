@@ -14,9 +14,9 @@ u64 gHilite2Tex[] = {
 #include "assets/objects/gameplay_keep/hilite_2.rgba16.inc.c"
 };
 
-u64 gHylianShieldDesignTex[] = {
+/*u64 gHylianShieldDesignTex[] = {
 #include "assets/objects/gameplay_keep/hylian_shield_design.rgba16.inc.c"
-};
+};*/
 
 u64 gOcarinaofTimeDesignTex[] = {
 #include "assets/objects/gameplay_keep/ocarina_of_time_design.rgba16.inc.c"
@@ -2473,9 +2473,9 @@ LinkAnimationHeader gPlayerAnim_Link_ue_wait = {
     { 40 }, gPlayerAnim_Link_ue_wait_Data
 };
 
-u8 gameplay_keep_possiblePadding_0034F8[] = {
+/*u8 gameplay_keep_possiblePadding_0034F8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_003500[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_003500.vtx.inc"
@@ -2614,9 +2614,9 @@ AnimationHeader gArrow2Anim = {
     sArrow2AnimJointIndices, 1
 };
 
-u8 gameplay_keep_possiblePadding_00437C[] = {
+/*u8 gameplay_keep_possiblePadding_00437C[] = {
     0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gArrowShaftTex[] = {
 #include "assets/objects/gameplay_keep/arrow_shaft.rgba16.inc.c"
@@ -2753,9 +2753,9 @@ SkeletonHeader gArrowSkel = {
     gArrowSkelLimbs, ARRAY_COUNT(gArrowSkelLimbs)
 };
 
-u8 gameplay_keep_possiblePadding_006018[] = {
+/*u8 gameplay_keep_possiblePadding_006018[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gUnknownEffBlureTex[] = {
 #include "assets/objects/gameplay_keep/unknown_eff_blure.i8.inc.c"
@@ -2784,9 +2784,9 @@ Gfx gBombBodyDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_0078E8[] = {
+/*u8 gameplay_keep_possiblePadding_0078E8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gBombCapTex[] = {
 #include "assets/objects/gameplay_keep/bomb_cap.rgba16.inc.c"
@@ -2869,9 +2869,9 @@ Gfx gBombchuDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_007F78[] = {
+/*u8 gameplay_keep_possiblePadding_007F78[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffBombExplosion1Tex[] = {
 #include "assets/objects/gameplay_keep/eff_bomb_explosion_1.ia16.inc.c"
@@ -2937,9 +2937,9 @@ Vtx gameplay_keepVtx_00C058[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00C058.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_00C098[] = {
+/*u8 gameplay_keep_possiblePadding_00C098[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_00C0A0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00C0A0.vtx.inc"
@@ -3018,9 +3018,9 @@ Gfx gBoomerangRefDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_00C818[] = {
+/*u8 gameplay_keep_possiblePadding_00C818[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Gfx gCompassArrowDL[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
@@ -3034,9 +3034,9 @@ Vtx gameplay_keepVtx_00C848[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00C848.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_00C878[] = {
+/*u8 gameplay_keep_possiblePadding_00C878[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_00C880[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00C880.vtx.inc"
@@ -3108,9 +3108,9 @@ Gfx gEffFragments2DL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_00CE58[] = {
+/*u8 gameplay_keep_possiblePadding_00CE58[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gGameplayKeepTex_CE60[] = {
 #include "assets/objects/gameplay_keep/gameplay_keep_tex_CE60.ia8.inc.c"
@@ -3128,11 +3128,11 @@ u64 gArrowCursorTex[] = {
 #include "assets/objects/gameplay_keep/arrow_cursor.ia8.inc.c"
 };
 
-Vtx gameplay_keepVtx_00D560[] = {
+/*Vtx gameplay_keepVtx_00D560[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00D560.vtx.inc"
-};
+};*/
 
-Gfx gUnusedRockFragmentDL[] = {
+/*Gfx gUnusedRockFragmentDL[] = {
     gsDPPipeSync(),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
@@ -3155,7 +3155,7 @@ Gfx gUnusedRockFragmentDL[] = {
     gsSP2Triangles(12, 13, 14, 0, 12, 14, 15, 0),
     gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
 Gfx gBoulderFragmentsDL[] = {
     gsDPPipeSync(),
@@ -3189,9 +3189,9 @@ Vtx gameplay_keepVtx_00D8B8[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00D8B8.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_00D978[] = {
+/*u8 gameplay_keep_possiblePadding_00D978[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gRockFragment1Tex[] = {
 #include "assets/objects/gameplay_keep/rock_fragment_1.rgba16.inc.c"
@@ -3224,9 +3224,9 @@ AnimationHeader gDoorChildOpeningLeftAnim = {
     sDoorChildOpeningLeftAnimJointIndices, 2
 };
 
-u8 gameplay_keep_possiblePadding_00EA64[] = {
+/*u8 gameplay_keep_possiblePadding_00EA64[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sDoorChildOpeningRightAnimFrameData[] = {
     0x0000, 0xC000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
@@ -3272,9 +3272,9 @@ AnimationHeader gDoorAdultOpeningLeftAnim = {
     sDoorAdultOpeningLeftAnimJointIndices, 2
 };
 
-u8 gameplay_keep_possiblePadding_00EC08[] = {
+/*u8 gameplay_keep_possiblePadding_00EC08[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_00EC10[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_00EC10.vtx.inc"
@@ -3428,9 +3428,9 @@ AnimationHeader gDoorAdultOpeningRightAnim = {
     sDoorAdultOpeningRightAnimJointIndices, 2
 };
 
-u8 gameplay_keep_possiblePadding_0104E8[] = {
+/*u8 gameplay_keep_possiblePadding_0104E8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Gfx gEffDustDL[] = {
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
@@ -3445,9 +3445,9 @@ Vtx gameplay_keepVtx_010548[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_010548.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_010588[] = {
+/*u8 gameplay_keep_possiblePadding_010588[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_010590[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_010590.vtx.inc"
@@ -3490,9 +3490,9 @@ u64 gFlashTex[] = {
 #include "assets/objects/gameplay_keep/flash.i8.inc.c"
 };
 
-u8 gameplay_keep_possiblePadding_0116C8[] = {
+/*u8 gameplay_keep_possiblePadding_0116C8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gTorchFlameTex[] = {
 #include "assets/objects/gameplay_keep/torch_flame.i8.inc.c"
@@ -3665,9 +3665,9 @@ Gfx gSpinAttackChargingDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_013B98[] = {
+/*u8 gameplay_keep_possiblePadding_013B98[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffUnknown2Tex[] = {
 #include "assets/objects/gameplay_keep/eff_unknown_2.i8.inc.c"
@@ -3677,11 +3677,11 @@ u64 gEffUnknown3Tex[] = {
 #include "assets/objects/gameplay_keep/eff_unknown_3.i8.inc.c"
 };
 
-Vtx gameplay_keepVtx_014BA0[] = {
+/*Vtx gameplay_keepVtx_014BA0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_014BA0.vtx.inc"
-};
+};*/
 
-Gfx gUnusedBeamBladeDL[] = {
+/*Gfx gUnusedBeamBladeDL[] = {
     gsDPPipeSync(),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
@@ -3710,11 +3710,11 @@ Gfx gUnusedBeamBladeDL[] = {
     gsSP2Triangles(4, 6, 5, 0, 7, 8, 5, 0),
     gsSP1Triangle(9, 10, 11, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
-u8 gameplay_keep_possiblePadding_014F88[] = {
+/*u8 gameplay_keep_possiblePadding_014F88[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sFairyAnimFrameData[] = {
     0x0000, 0xE7EE, 0x9812, 0x4AAB, 0x50E4, 0x58E4, 0x5AF7, 0x58E4, 0x4AAB, 0x50E4, 0x58E4, 0x59C7, 0x58E4, 0x3555, 
@@ -3746,9 +3746,9 @@ AnimationHeader gFairyAnim = {
     sFairyAnimJointIndices, 3
 };
 
-u8 gameplay_keep_possiblePadding_015054[] = {
+/*u8 gameplay_keep_possiblePadding_015054[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gFairyWingTex[] = {
 #include "assets/objects/gameplay_keep/fairy_wing.i8.inc.c"
@@ -3880,9 +3880,9 @@ Vtx gameplay_keepVtx_015D88[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_015D88.vtx.inc"
 };
 
-u64 gUnusedFairyWingTex[] = {
+/*u64 gUnusedFairyWingTex[] = {
 #include "assets/objects/gameplay_keep/unused_fairy_wing.rgba16.inc.c"
-};
+};*/
 
 StandardLimb gFairySkelLimbsLimb_016E08 = { 
     { 0, 0, 0 }, 0x01, LIMB_DONE,
@@ -4177,9 +4177,9 @@ FlexSkeletonHeader gFishSkel = {
     { gFishSkelLimbs, ARRAY_COUNT(gFishSkelLimbs) }, 3
 };
 
-u8 gameplay_keep_possiblePadding_01948C[] = {
+/*u8 gameplay_keep_possiblePadding_01948C[] = {
     0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 s16 sFishInWaterAnimFrameData[] = {
     0x0000, 0x4000, 0x8000, 0xFFC0, 0xFF2D, 0xFE8D, 0xFDEE, 0xFD5B, 0xFCE2, 0xFC90, 0xFC72, 0xFC90, 0xFCE2, 0xFD5B, 
@@ -4204,9 +4204,9 @@ AnimationHeader gFishInWaterAnim = {
     sFishInWaterAnimJointIndices, 3
 };
 
-u8 gameplay_keep_possiblePadding_01954C[] = {
+/*u8 gameplay_keep_possiblePadding_01954C[] = {
     0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffShockwaveTex[] = {
 #include "assets/objects/gameplay_keep/eff_shockwave.i8.inc.c"
@@ -4247,9 +4247,9 @@ Vtx gameplay_keepVtx_01A678[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_01A678.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_01A6B8[] = {
+/*u8 gameplay_keep_possiblePadding_01A6B8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffFireFootprint1Tex[] = {
 #include "assets/objects/gameplay_keep/eff_fire_footprint_1.ia8.inc.c"
@@ -4460,9 +4460,9 @@ Vtx gameplay_keepVtx_021C68[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_021C68.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_021CA8[] = {
+/*u8 gameplay_keep_possiblePadding_021CA8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffUnknown6Tex[] = {
 #include "assets/objects/gameplay_keep/eff_unknown_6.i8.inc.c"
@@ -4697,9 +4697,9 @@ Vtx gameplay_keepVtx_02D438[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_02D438.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_02D478[] = {
+/*u8 gameplay_keep_possiblePadding_02D478[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffEnemyDeathFlame1Tex[] = {
 #include "assets/objects/gameplay_keep/eff_enemy_death_flame_1.i8.inc.c"
@@ -4756,9 +4756,9 @@ Vtx gameplay_keepVtx_0324E8[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_0324E8.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_032528[] = {
+/*u8 gameplay_keep_possiblePadding_032528[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gEffUnknown9Tex[] = {
 #include "assets/objects/gameplay_keep/eff_unknown_9.i8.inc.c"
@@ -4845,9 +4845,9 @@ Gfx gEffIceFragment2DL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_033DA8[] = {
+/*u8 gameplay_keep_possiblePadding_033DA8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_033DB0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_033DB0.vtx.inc"
@@ -5415,9 +5415,9 @@ SkeletonHeader gBugSkel = {
     gBugSkelLimbs, ARRAY_COUNT(gBugSkelLimbs)
 };
 
-u8 gameplay_keep_possiblePadding_035A38[] = {
+/*u8 gameplay_keep_possiblePadding_035A38[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_035A40[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_035A40.vtx.inc"
@@ -5599,9 +5599,9 @@ Gfx gGameplayKeepDL_39890[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_039968[] = {
+/*u8 gameplay_keep_possiblePadding_039968[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_039970[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_039970.vtx.inc"
@@ -5622,9 +5622,9 @@ Gfx gGameplayKeepDL_399B0[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_039A38[] = {
+/*u8 gameplay_keep_possiblePadding_039A38[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_039A40[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_039A40.vtx.inc"
@@ -5645,9 +5645,9 @@ Gfx gGameplayKeepDL_39A80[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_039B08[] = {
+/*u8 gameplay_keep_possiblePadding_039B08[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_039B10[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_039B10.vtx.inc"
@@ -5668,9 +5668,9 @@ Gfx gGameplayKeepDL_39B50[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_039BD8[] = {
+/*u8 gameplay_keep_possiblePadding_039BD8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 BgCamInfo gLargerCubeColCamDataList[] = {
     { 0x0000, 0, NULL },
@@ -5740,11 +5740,11 @@ Gfx gLiftableRockDL[] = {
     gsSPEndDisplayList(),
 };
 
-Vtx gameplay_keepVtx_039F40[] = {
+/*Vtx gameplay_keepVtx_039F40[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_039F40.vtx.inc"
-};
+};*/
 
-Gfx gUnusedRockRectangularPrism1DL[] = {
+/*Gfx gUnusedRockRectangularPrism1DL[] = {
     gsDPPipeSync(),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTextureBlock(gUnknownStone1Tex, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32, 0, G_TX_NOMIRROR | G_TX_WRAP,
@@ -5762,7 +5762,7 @@ Gfx gUnusedRockRectangularPrism1DL[] = {
     gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
     gsSP2Triangles(20, 21, 22, 0, 20, 22, 23, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
 BgCamInfo gWideTallBlockColCamDataList[] = {
     { 0x0000, 0, NULL },
@@ -5808,9 +5808,9 @@ CollisionHeader gWideTallBlockCol = {
     0, NULL
 };
 
-u8 gameplay_keep_possiblePadding_03A2A4[] = {
+/*u8 gameplay_keep_possiblePadding_03A2A4[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_03A2B0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03A2B0.vtx.inc"
@@ -5837,9 +5837,9 @@ Gfx gFlatBlockDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03A4E8[] = {
+/*u8 gameplay_keep_possiblePadding_03A4E8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 BgCamInfo gTallBlockColCamDataList[] = {
     { 0x0000, 0, NULL },
@@ -5889,7 +5889,7 @@ Vtx gameplay_keepVtx_03A620[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03A620.vtx.inc"
 };
 
-Gfx gUnusedRockRectangularPrism3DL[] = {
+/*Gfx gUnusedRockRectangularPrism3DL[] = {
     gsDPPipeSync(),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTextureBlock(gUnknownStone2Tex, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32, 0, G_TX_NOMIRROR | G_TX_WRAP,
@@ -5907,7 +5907,7 @@ Gfx gUnusedRockRectangularPrism3DL[] = {
     gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
     gsSP2Triangles(20, 21, 22, 0, 20, 22, 23, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
 BgCamInfo gSmallerFlatBlockColCamDataList[] = {
     { 0x0000, 0, NULL },
@@ -6046,9 +6046,9 @@ Gfx gSmallCubeDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03AF18[] = {
+/*u8 gameplay_keep_possiblePadding_03AF18[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 BgCamInfo gSmallerCubeColCamDataList[] = {
     { 0x0000, 0, NULL },
@@ -6148,9 +6148,9 @@ Gfx gGrassBladesDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03B458[] = {
+/*u8 gameplay_keep_possiblePadding_03B458[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gHeartShapeTex[] = {
 #include "assets/objects/gameplay_keep/heart_shape.i8.inc.c"
@@ -6207,9 +6207,9 @@ Gfx gHeartPieceInteriorDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03BA08[] = {
+/*u8 gameplay_keep_possiblePadding_03BA08[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_03BA10[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03BA10.vtx.inc"
@@ -6356,9 +6356,9 @@ Gfx gGameplayKeepDL_3D108[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03D218[] = {
+/*u8 gameplay_keep_possiblePadding_03D218[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_03D220[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03D220.vtx.inc"
@@ -6379,9 +6379,9 @@ Gfx gGameplayKeepDL_3D260[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03D2E8[] = {
+/*u8 gameplay_keep_possiblePadding_03D2E8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_03D2F0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03D2F0.vtx.inc"
@@ -6436,9 +6436,9 @@ Gfx gSignRectangularDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_03D7E8[] = {
+/*u8 gameplay_keep_possiblePadding_03D7E8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_03D7F0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_03D7F0.vtx.inc"
@@ -6551,9 +6551,9 @@ Vtx gameplay_keepVtx_041E08[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_041E08.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_041E48[] = {
+/*u8 gameplay_keep_possiblePadding_041E48[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gDropKeySmallTex[] = {
 #include "assets/objects/gameplay_keep/drop_key_small.rgba16.inc.c"
@@ -6679,13 +6679,13 @@ u64 gUnusedGrassBladesTex[] = {
 #include "assets/objects/gameplay_keep/unused_grass_blades.rgba16.inc.c"
 };
 
-u64 gUnusedStoneHookshotTargetTex[] = {
+/*u64 gUnusedStoneHookshotTargetTex[] = {
 #include "assets/objects/gameplay_keep/unused_stone_hookshot_target.rgba16.inc.c"
-};
+};*/
 
-u64 gUnknownStone3Tex[] = {
+/*u64 gUnknownStone3Tex[] = {
 #include "assets/objects/gameplay_keep/unknown_stone_3.rgba16.inc.c"
-};
+};*/
 
 u64 gSignRectangularSideTex[] = {
 #include "assets/objects/gameplay_keep/sign_rectangular_side.rgba16.inc.c"
@@ -6787,9 +6787,9 @@ Gfx gDungeonDoorDL[] = {
     gsSPEndDisplayList(),
 };
 
-u8 gameplay_keep_possiblePadding_04F5B8[] = {
+/*u8 gameplay_keep_possiblePadding_04F5B8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 u64 gDoorMetalBarsTex[] = {
 #include "assets/objects/gameplay_keep/door_metal_bars.ia8.inc.c"
@@ -6893,9 +6893,9 @@ Vtx gameplay_keepVtx_052878[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_052878.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_052978[] = {
+/*u8 gameplay_keep_possiblePadding_052978[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Gfx gLockOnReticleTriangleDL[] = {
     gsSPVertex(gameplay_keepVtx_052998, 3, 0),
@@ -6907,9 +6907,9 @@ Vtx gameplay_keepVtx_052998[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_052998.vtx.inc"
 };
 
-u8 gameplay_keep_possiblePadding_0529C8[] = {
+/*u8 gameplay_keep_possiblePadding_0529C8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
 Vtx gameplay_keepVtx_0529D0[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_0529D0.vtx.inc"
@@ -6959,11 +6959,11 @@ u64 gDecorativeFlameTex[] = {
 #include "assets/objects/gameplay_keep/eff_fire.i8.inc.c"
 };
 
-Vtx gameplay_keepVtx_053B90[] = {
+/*Vtx gameplay_keepVtx_053B90[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_053B90.vtx.inc"
-};
+};*/
 
-Gfx gUnusedUnknownShape1DL[] = {
+/*Gfx gUnusedUnknownShape1DL[] = {
     gsSPVertex(gameplay_keepVtx_053B90, 32, 0),
     gsSP1Quadrangle(25, 6, 30, 20, 0),
     gsSP1Quadrangle(17, 5, 28, 23, 0),
@@ -7076,18 +7076,18 @@ Gfx gUnusedUnknownShape1DL[] = {
     gsSP1Triangle(16, 24, 19, 0),
     gsSP1Quadrangle(18, 21, 17, 16, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
-Gfx gUnusedUnknownShape1RefDL[] = {
+/*Gfx gUnusedUnknownShape1RefDL[] = {
     gsSPDisplayList(gUnusedUnknownShape1DL),
     gsSPEndDisplayList(),
-};
+};*/
 
-Vtx gameplay_keepVtx_054B70[] = {
+/*Vtx gameplay_keepVtx_054B70[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_054B70.vtx.inc"
-};
+};*/
 
-Gfx gUnusedUnknownShape2DL[] = {
+/*Gfx gUnusedUnknownShape2DL[] = {
     gsSPVertex(gameplay_keepVtx_054B70, 32, 0),
     gsSP1Quadrangle(26, 8, 28, 27, 0),
     gsSP1Quadrangle(20, 29, 31, 6, 0),
@@ -7188,18 +7188,18 @@ Gfx gUnusedUnknownShape2DL[] = {
     gsSP1Quadrangle(12, 11, 14, 16, 0),
     gsSP1Quadrangle(6, 10, 9, 8, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
-Gfx gUnusedUnknownShape2RefDL[] = {
+/*Gfx gUnusedUnknownShape2RefDL[] = {
     gsSPDisplayList(gUnusedUnknownShape2DL),
     gsSPEndDisplayList(),
-};
+};*/
 
-Vtx gameplay_keepVtx_055B40[] = {
+/*Vtx gameplay_keepVtx_055B40[] = {
 #include "assets/objects/gameplay_keep/gameplay_keepVtx_055B40.vtx.inc"
-};
+};*/
 
-Gfx gUnusedUnknownShape3DL[] = {
+/*Gfx gUnusedUnknownShape3DL[] = {
     gsSPVertex(gameplay_keepVtx_055B40, 32, 0),
     gsSP1Quadrangle(25, 23, 27, 8, 0),
     gsSP1Quadrangle(22, 7, 27, 26, 0),
@@ -7299,20 +7299,20 @@ Gfx gUnusedUnknownShape3DL[] = {
     gsSP1Quadrangle(3, 0, 1, 4, 0),
     gsSP1Quadrangle(5, 6, 2, 0, 0),
     gsSPEndDisplayList(),
-};
+};*/
 
-Gfx gUnusedUnknownShape3RefDL[] = {
+/*Gfx gUnusedUnknownShape3RefDL[] = {
     gsSPDisplayList(gUnusedUnknownShape3DL),
     gsSPEndDisplayList(),
-};
+};*/
 
-u8 gameplay_keep_possiblePadding_056AD8[] = {
+/*u8 gameplay_keep_possiblePadding_056AD8[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-};
+};*/
 
-u64 gUnusedUpsideDownZeldaTex[] = {
+/*u64 gUnusedUpsideDownZeldaTex[] = {
 #include "assets/objects/gameplay_keep/upside_down_zelda.i8.inc.c"
-};
+};*/
 
 u64 gDust1Tex[] = {
 #include "assets/objects/gameplay_keep/dust_1.i8.inc.c"

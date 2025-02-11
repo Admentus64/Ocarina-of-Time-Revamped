@@ -8521,6 +8521,10 @@ s16 Camera_RequestSettingImpl(Camera* camera, s16 requestedSetting, s16 flags) {
         }
     }
 
+  /*if (requestedSetting == CAM_SET_MEADOW_BIRDS_EYE && GET_EVENTCHKINF(EVENTCHKINF_45) && camera->play->sceneId == SCENE_SACRED_FOREST_MEADOW && camera->play->sceneId != SCENE_KOKIRI_FOREST) {
+        camera->behaviorFlags |= CAM_BEHAVIOR_SETTING_VALID;
+        return -5;
+    }*/
     if (((requestedSetting == CAM_SET_MEADOW_BIRDS_EYE) || (requestedSetting == CAM_SET_MEADOW_UNUSED)) &&
         LINK_IS_ADULT && (camera->play->sceneId == SCENE_SACRED_FOREST_MEADOW)) {
         camera->behaviorFlags |= CAM_BEHAVIOR_SETTING_VALID;

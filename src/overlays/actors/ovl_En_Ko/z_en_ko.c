@@ -508,6 +508,7 @@ u16 EnKo_GetTextId(PlayState* play, Actor* thisx) {
     if (textId != 0) {
         return textId;
     }
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (LINK_IS_ADULT) {
         return EnKo_GetTextIdAdult(play, thisx);
     }
@@ -610,6 +611,7 @@ s16 EnKo_UpdateTalkState(PlayState* play, Actor* thisx) {
 s32 EnKo_GetForestQuestState(EnKo* this) {
     s32 result;
 
+  //if (!GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (!LINK_IS_ADULT) {
         // Obtained Zelda's Letter
         if (GET_EVENTCHKINF(EVENTCHKINF_40)) {
@@ -646,6 +648,7 @@ f32 func_80A97BC0(EnKo* this) {
         /* ENKO_TYPE_CHILD_FADO */ { 0.0f, 0.0f, 0.0f, -20.0f, -20.0f },
     };
 
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45) && ENKO_TYPE == ENKO_TYPE_CHILD_FADO) {
     if (LINK_IS_ADULT && ENKO_TYPE == ENKO_TYPE_CHILD_FADO) {
         return -20.0f;
     }
@@ -1007,6 +1010,7 @@ void func_80A9877C(EnKo* this, PlayState* play) {
 s32 EnKo_CanSpawn(EnKo* this, PlayState* play) {
     switch (play->sceneId) {
         case SCENE_KOKIRI_FOREST:
+          //return (ENKO_TYPE < ENKO_TYPE_CHILD_7 || ENKO_TYPE == ENKO_TYPE_CHILD_FADO) && (!GET_EVENTCHKINF(EVENTCHKINF_45) || CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST));
             if (ENKO_TYPE >= ENKO_TYPE_CHILD_7 && ENKO_TYPE != ENKO_TYPE_CHILD_FADO) {
                 return false;
             }
@@ -1021,6 +1025,7 @@ s32 EnKo_CanSpawn(EnKo* this, PlayState* play) {
                 return true;
             }
         case SCENE_TWINS_HOUSE:
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
             if (LINK_IS_ADULT && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
                 if (ENKO_TYPE != ENKO_TYPE_CHILD_1 && ENKO_TYPE != ENKO_TYPE_CHILD_9) {
                     return false;
@@ -1034,6 +1039,7 @@ s32 EnKo_CanSpawn(EnKo* this, PlayState* play) {
                 return true;
             }
         case SCENE_MIDOS_HOUSE:
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
             if (LINK_IS_ADULT && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
                 if (ENKO_TYPE != ENKO_TYPE_CHILD_0 && ENKO_TYPE != ENKO_TYPE_CHILD_4) {
                     return false;
@@ -1044,6 +1050,7 @@ s32 EnKo_CanSpawn(EnKo* this, PlayState* play) {
                 return false;
             }
         case SCENE_SARIAS_HOUSE:
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
             if (LINK_IS_ADULT && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
                 if (ENKO_TYPE != ENKO_TYPE_CHILD_6) {
                     return false;
@@ -1055,6 +1062,7 @@ s32 EnKo_CanSpawn(EnKo* this, PlayState* play) {
             }
 
         case SCENE_KOKIRI_SHOP:
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45) && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
             if (LINK_IS_ADULT && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
                 if (ENKO_TYPE != ENKO_TYPE_CHILD_5 && ENKO_TYPE != ENKO_TYPE_CHILD_10) {
                     return false;
@@ -1101,6 +1109,7 @@ void func_80A98CD8(EnKo* this) {
 
 // Used to fetch actor animation?
 s32 EnKo_GetForestQuestState2(EnKo* this) {
+  //if (GET_EVENTCHKINF(EVENTCHKINF_45)) {
     if (LINK_IS_ADULT) {
         return CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST) ? ENKO_FQS_ADULT_SAVED : ENKO_FQS_ADULT_ENEMY;
     }
@@ -1184,6 +1193,7 @@ void func_80A99048(EnKo* this, PlayState* play) {
         if (ENKO_TYPE == ENKO_TYPE_CHILD_7) {
             // "Angle Z"
             PRINTF(VT_BGCOL(BLUE) "  アングルＺ->(%d)\n" VT_RST, this->actor.shape.rot.z);
+          //if (GET_EVENTCHKINF(EVENTCHKINF_45)&& !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
             if (LINK_IS_ADULT && !CHECK_QUEST_ITEM(QUEST_MEDALLION_FOREST)) {
                 if (this->actor.shape.rot.z != 1) {
                     Actor_Kill(&this->actor);
